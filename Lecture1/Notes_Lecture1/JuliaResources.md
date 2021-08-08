@@ -1,1 +1,5 @@
-[Julia Book by BenLauwens](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html)
+1. [Julia Book by BenLauwens](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html)
+2. [Julia compared to langs](https://docs.julialang.org/en/v1/manual/noteworthy-differences/)
+3. [Language Cheatsheet, MatLabJuliaPython](https://cheatsheets.quantecon.org)
+4. [Learn Julia in Y Minutes](https://learnxinyminutes.com/docs/julia/)
+5. [Deep Intro to Julia by Rackauckas](http://ucidatascienceinitiative.github.io/IntroToJulia/)
