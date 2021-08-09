@@ -4,7 +4,7 @@
 Before parallelization, the serial version of your program must be optimized (otherwise parallel programming won't help much). This lecture teaches some of the basics of serial optimization, connecting them to the fast and slow operations in relation to memory allocation (dynamic vs static), control flow, and @jit compiler optimization
 
 ### Computer Memory Structure
-[Memory Structure](./GraphicsFromLecture/CPUMemoryStructure)
+![](./GraphicsFromLecture/CPUMemoryStructure)
 Memory structure is divided into separate intermediary caches separate from the registers present in the CPU core. Obviously, the slowest access is in main memory, and the fastest is any registers available on the CPU core (which may be hundreds or more) but which are not usually used for memory storage. In order of speed, these intermediary caches are as follows:
 1. **L1 Cache**: most immediately available to the CPU, but not shared between CPUs
 2. **L2 Cache**: second fastest, available to all CPUs (each CPU can access memory in a shared L2 cache)
@@ -30,7 +30,7 @@ A related topic is views vs copies in Julia. By default, slicing an array will c
 ### More on Dynamic (Heap) Allocations
 While stack allocations are static, with O(*1*) time complexity and a small constant, dynamic heap allocations tend to be O(*n*) time complexity with a large constant. In generate, heap allocations will require ~100 times more clock cycles that their static allocation counterpart. See: the following infographic for a useful heuristic
 
-[Approximate Runttime](./GraphicsFromLecture/ApproxClockCycles)
+![](./GraphicsFromLecture/ApproxClockCycles)
 
 What's worse is that if heap memory is exceeded (i.e., you run out of RAM), your computer will begin using *swap* memory, which is far slower than RAM (sometimes so slow as to make the program appear to be hung). For this reason, when optimizing, it is often far better to preallocate memory (or use an existing memory structure) to avoid dynamic allocations.
 
