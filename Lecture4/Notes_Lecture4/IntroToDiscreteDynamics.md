@@ -43,7 +43,11 @@ However, single variable systems are very limited in use: most (interesting) sys
 Let x be a number from the domain R^(k) with **x(n+1) = f(x(n))** where **f** is a linear dynamics matrix from the domain R^(k x k), with an update equation **x(n+1) = A•x(n)**. There's an easy way to evaluate the stability of these systems using eigenvalue decomposition:
 
 1. Decompose **A** into the diagonalization **P^-1 • D • P**, where **D** is the diagonalization of eigenvalues and **P** is the square matrix of eigenvectors
-2. Incorporate this diagonalization into the original update equation: **x(n+1) = A • x(n) => x(n+1) = P^-1 • D • P • x(n) => P • x(n+1) = D • P • x(n) => z(n+1) = D • z(n)** where **z(i)** is the product of the eigenvector matrix and the original set of variables
+2. Incorporate this diagonalization into the original update equation: 
+ 
+**x(n+1) = A • x(n) => x(n+1) = P^-1 • D • P • x(n) => P • x(n+1) = D • P • x(n) => z(n+1) = D • z(n)** 
+
+where **z(i)** is the product of the eigenvector matrix and the original set of variables
 3. Since D is diagonal, this original set of interdependent linear variables has been converted to a system of k *independent* dynamic systems. Thus the stability criterion is very simple: for the system to approach a stable equilibrium, *ALL* eigenvalues **||D(i)|| < 1**. In other words, if **D** is contained within the unit circle
 
 In other words, using standard linear algebra toolsets, it's very easy to examine the stability of even complex systems. Now I will discuss some variants of these multivariable systems
@@ -97,6 +101,7 @@ The in-place variant only helps **if** you only need the endpoint of your system
 
 #### Static Variant
 **8 microseconds**
+
 If system is small (<10 elements) storing as static arrays can be beneficial. In this form, you would input the initial state as an `@SVector u0`, your dynamics function `f` would output `@SVector du`, and you would return a Vector of static vectors `Vector{SVector} u` which contains the solutions to the system. Since space can be allocated on the stack for ~no cost, this is far more efficient than allocating space for your solutions on the heap (if you have enough space on the stack, that is).
 
 Adding `@inbounds` macros (removing bounds-checking) can further reduce the runtime by about 33% more, resulting in a runtime nearer to **5 microseconds**, which is great
