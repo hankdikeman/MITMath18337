@@ -43,11 +43,7 @@ However, single variable systems are very limited in use: most (interesting) sys
 Let x be a number from the domain R^(k) with **x(n+1) = f(x(n))** where **f** is a linear dynamics matrix from the domain R^(k x k), with an update equation **x(n+1) = A•x(n)**. There's an easy way to evaluate the stability of these systems using eigenvalue decomposition:
 
 1. Decompose **A** into the diagonalization **P^-1 • D • P**, where **D** is the diagonalization of eigenvalues and **P** is the square matrix of eigenvectors
-2. Incorporate this diagonalization into the original update equation: 
- 
-**x(n+1) = A • x(n) => x(n+1) = P^-1 • D • P • x(n) => P • x(n+1) = D • P • x(n) => z(n+1) = D • z(n)** 
-
-where **z(i)** is the product of the eigenvector matrix and the original set of variables
+2. Incorporate this diagonalization into the original update equation: **x(n+1) = A • x(n) => x(n+1) = P^-1 • D • P • x(n) => P • x(n+1) = D • P • x(n) => z(n+1) = D • z(n)** where **z(i)** is the product of the eigenvector matrix and the original set of variables
 3. Since D is diagonal, this original set of interdependent linear variables has been converted to a system of k *independent* dynamic systems. Thus the stability criterion is very simple: for the system to approach a stable equilibrium, *ALL* eigenvalues **||D(i)|| < 1**. In other words, if **D** is contained within the unit circle
 
 In other words, using standard linear algebra toolsets, it's very easy to examine the stability of even complex systems. Now I will discuss some variants of these multivariable systems
