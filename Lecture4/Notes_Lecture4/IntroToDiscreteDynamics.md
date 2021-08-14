@@ -10,7 +10,7 @@ A discrete dynamical system is defined by a relationship of the form: `u_n+1 = m
 
 *Example 1:* an autoregression model called AR1 is defined by the relationship `u_n+1 = &alpha;*u_n + &epsilon;_n`, where `a` is a constant and `eps_n` is a number generated from a random normal distribution
 
-*Example 2:* a recurrent neural network (RNN) is a discrete timeseries defined by `u_n+1 = u_n + f(u_n, &theta;)` where `f` is a neural network parametrization and `p` is the set of model parameters
+*Example 2:* a recurrent neural network (RNN) is a discrete timeseries defined by *u_n+1 = u_n + f(u_n, &theta;)* where `f` is a neural network parametrization and `p` is the set of model parameters
 
 ### Properties of Linear Dynamical Systems
 T
