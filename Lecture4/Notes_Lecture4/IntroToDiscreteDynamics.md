@@ -1,5 +1,5 @@
 ## Intro to Scientific Machine Learning
-08/10/21
+08/13/21
 
 The basis of most physical models are dynamic systems, with equations describing the rates of change of given variables with respect to other variables. In this lecture:
 1. Basic properties of discrete dynamical systems
@@ -97,6 +97,7 @@ The in-place variant only helps **if** you only need the endpoint of your system
 
 #### Static Variant
 **8 microseconds**
+
 If system is small (<10 elements) storing as static arrays can be beneficial. In this form, you would input the initial state as an `@SVector u0`, your dynamics function `f` would output `@SVector du`, and you would return a Vector of static vectors `Vector{SVector} u` which contains the solutions to the system. Since space can be allocated on the stack for ~no cost, this is far more efficient than allocating space for your solutions on the heap (if you have enough space on the stack, that is).
 
 Adding `@inbounds` macros (removing bounds-checking) can further reduce the runtime by about 33% more, resulting in a runtime nearer to **5 microseconds**, which is great
