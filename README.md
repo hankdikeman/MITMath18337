@@ -11,3 +11,6 @@ This repo contains the programs developed for the parallel computing/scientific 
 3. Lecture 3
    - [Lecture 3 Notes](Lecture3/Notes_Lecture3/): typed notes on an intro to scientific machine learning, with a quick intro to `Flux.jl` and details on a common scientific ML framework
    - [Lecture 3 Programs](Lecture3/Programs_Lecture3/): some simple implementations of trivial neural networks, and a PINN for a damped oscillator system
+3. Lecture 4
+   - [Lecture 4 Notes](Lecture4/Notes_Lecture4/): typed notes on discrete dynamical systems and efficient implementations to solve for these systems in Julia and compiled languages in general
+   - [Lecture 4 Programs](Lecture4/Programs_Lecture4/): an implementation to solve for the discretized form of the Lorenz system, with naive and optimized implementations
