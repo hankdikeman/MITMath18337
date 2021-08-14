@@ -1,5 +1,5 @@
 ## Intro to Scientific Machine Learning
-08/10/21
+08/13/21
 
 The basis of most physical models are dynamic systems, with equations describing the rates of change of given variables with respect to other variables. In this lecture:
 1. Basic properties of discrete dynamical systems
