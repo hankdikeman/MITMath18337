@@ -1,4 +1,4 @@
-# This file implements a barebones neural network
+# This file contains a PINN netowkr for a damped oscillator
 # Author:   Henry Dikeman
 # Contact:  dikem003@umn.edu
 
