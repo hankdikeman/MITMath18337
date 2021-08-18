@@ -11,7 +11,7 @@ Parallel computing seeks to extend Moore's Law by increasing efficiency in paral
 
 The hierarchy of a process is described by this image:
 
-![](./MultithreadStacks)
+![](./MultithreadStacks.png)
 
 A **process** consists of a discrete running instance of a program. The process controls the overriding resources, such as the program data and heap (dynamically allocated) memory. Within this process, there are anywhere from 1 to many compute threads that have their own stack and virtual CPU to perform operations. The process can only operate in one "**context**" at a time, and must switch between threads (and their corresponding stack memories)
 
