@@ -1,4 +1,4 @@
-## Single Node Parallel Computing
+## Types of Parallelism
 08/17/21
 
 This lecture provides a high-level overview of the different styles of parallelism, how they work, what applications they should be used for, and the benefits and drawbacks of each paradigm
