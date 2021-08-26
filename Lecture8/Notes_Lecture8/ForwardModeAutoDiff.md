@@ -117,7 +117,7 @@ Say our goal is to solve f(x) = 0 for f: ℝ^n -> R^m. In general, we can't solv
 
 Instead, we use a linear approximation method, where we assume local linearity within our solution. We start at x0, follow the tangent line to x1 where f(x1) is 0, and continue this optimization until x(n) = x(n+1):
 
-f(x1) = f(x0 + &del;) = f(x0) + Df(x0)•&del; + O(||&del;^2||) => solve for J&del; = -f(x0)
+f(x1) = f(x0 + &delta;) = f(x0) + Df(x0)•&delta; + O(||&delta;^2||) => solve for J&delta; = -f(x0)
 
 This is implemented below:
 ```
